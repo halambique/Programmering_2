@@ -1,0 +1,41 @@
+1.1
+Et Java Runtime Environment (JRE) er programvaren som brukes for å kjøre Java-applikasjoner, og er den programvaren brukere vil ha behov for. Inkludert i JRE er logikken som trengs for å kjøre kompilert Java-kode, og det gjøres i en Java Virtual Machine (JVM).
+Et JDK, eller Java Development Kit, er en samling programvare og biblioteker som gjør det mulig å utvikle, teste og kompilere Java-kode.
+
+1.2
+Et Java-program har tre overordnede steg:
+1. Java-kode skrives
+2. Java-kode kompileres til bytekode med 'javac'
+3. Byte-koden kjøres med 'java'
+
+Brutt ned kan vi tenke på trinn 2 som prosessen der programmer klargjøres for å kunne kjøres i en JVM, og trinn 3 som prosessen der programmer faktisk kjøres.
+
+1.3
+En 'compile-time error' er en feil som oppstår i det ovennevnte trinn 2, og kan for eksempel være feil med syntaks, feilstavelser eller manglende deklarering av variabler, manglende semikolon osv.
+Hvis sånne feil finnes, må de rettes opp før et program kan kompileres.
+
+En 'runtime error' er en feil som kan oppstå når programmets bytekode kjøres, altså etter kompilering. Dette kan oppstå hvis en bruker for eksempel prøver å utføre en logikk som koden ikke kan utføre, eller mer generelle feil som å dele på null.
+
+1.4.
+Objekt-orientert programmering baserer seg i stor grad på å benytte klasser som en slags mal til å kunne modellere ulike objjekter. En klasse vil kunne være, for eksempel:
+public class Hund {
+    String rase;
+    String navn;
+    }
+
+Denne klassen vil kunne inneholde metoder for ting hunder kan finne på å gjøre, som for eksempel:
+
+    public void kose() {
+        System.out.print("Hunden koser")
+    }
+
+    public void leke() {
+        System.out.print("Hunden leker")
+    }
+
+Hvis jeg vil modellere min egen hund, Sergej, kan jeg bruke denne klassen som mal for hunden min:
+
+Hund minHund = new Hund();
+    minHund.rase = "Puddel";
+    minHund.navn = "Sergej";
+
