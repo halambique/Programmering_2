@@ -1,3 +1,5 @@
+package no.hiof.mathibr;
+
 public class Episode {
     private String title;
     private int episodeNumber;
@@ -47,4 +49,12 @@ public class Episode {
     public void setPlaytime(int playtime) {
         this.playtime = playtime;
     }
+
+    //toString() method implementation
+    @Override
+    public String toString() {
+        return "Episode name: " + title + "\nEpisode number: " + episodeNumber + "\nSeason number: " + seasonNumber + "\nPlaytime: " + playtime;
+
+    }
 }
+
