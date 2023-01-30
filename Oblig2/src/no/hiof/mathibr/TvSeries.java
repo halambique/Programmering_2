@@ -8,19 +8,20 @@ public class TvSeries {
     private String title;
     private String description;
     private LocalDate releaseDate;
-    private byte numberOfEpisodes;
-    private ArrayList<Episode> episodes = new ArrayList<Episode>();
+    private int numberOfEpisodes;
+    private static ArrayList<Episode> episodes = new ArrayList<Episode>();
 
 
-    public TvSeries(String title, String description, LocalDate releaseDate, byte numberOfEpisodes) {
+    public TvSeries(String title, String description, LocalDate releaseDate, int numberOfEpisodes) {
         this.title = title;
         this.description = description;
         this.releaseDate = releaseDate;
         this.numberOfEpisodes = numberOfEpisodes;
     }
 
-    public void addEpisode(Episode episode) {
-        episodes.add(episode);
+    public static void addEpisode() {
+        Episode Episode = null;
+        episodes.add(Episode);
     }
 
     @Override
@@ -28,20 +29,18 @@ public class TvSeries {
         return "Title: " + title + "\nDescription: " + description + "\nFirst aired: " + releaseDate + "\nNumber of episodes: " + numberOfEpisodes;
     }
 
-    public ArrayList<Episode> getEpisodesInSeason(int season){
-        ArrayList<Episode> episodes = new ArrayList<Episode>();
-        int episodeCount = 0;
-        while (season <= 5) {
-            season++;
+    //Bør være en enkel metode som ser på .size av array list episoder i array list sesonger?
+   // public ArrayList<Episode> getEpisodesInSeason(int season){
+    //    return Episode;
 
-            while (episodeCount <= 20 ) {
-                episodes.add(new Season(season, episodeCount));
-            }
-        }
-
-        return season, episodeCount;
+    public ArrayList<Episode> episodesInSeason(int season){
+        for (int i = 0; episodes.get(season).getSeasonNumber() <= season.size; )
     }
 
 
+
 }
+
+
+
 
