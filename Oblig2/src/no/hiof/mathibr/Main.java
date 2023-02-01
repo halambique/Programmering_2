@@ -1,6 +1,7 @@
 package no.hiof.mathibr;
-
 import java.time.LocalDate;
+import java.util.Random;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -11,20 +12,20 @@ public class Main {
         Episode victim = new Episode("Victim", 2, 1, 60);
         Episode emergencyInWardE = new Episode("Emergency in Ward E", 3, 1, 60);
 
-        System.out.println("\n");
-        System.out.println(medicalCenter.toString());
-        System.out.println("\n");
-        System.out.println(theLastTenYards.toString());
+        Random randomPlaytime = new Random();
 
-
-        /*Lage en array list med sesonger og array lists inni med episoder???
-        Bruke set-metode?? Bruke addEpisode fra TvSeries?*/
         for (int seasons = 1; seasons<=7; seasons++){
-            for (int episodesInSeason = 0; episodesInSeason <= 24; episodesInSeason++)
-            Episode episode = new Episode("Episode #" + episodesInSeason, episodesInSeason, Episode.getSeasonNumber);
-                TvSeries.addEpisode();
+            for (int episodesInSeason = 1; episodesInSeason <= 24; episodesInSeason++) {
+                int randInt = randomPlaytime.nextInt(30-20) + 20;
+                Episode episode = new Episode("Episode #" + episodesInSeason, episodesInSeason, seasons, randInt);
+                medicalCenter.addEpisode(episode);
+            }
         }
+        medicalCenter.updateAvgPlaytime();
+        System.out.println("Average playtime: " + medicalCenter.getAvgPlaytime());
 
+
+       // System.out.println(medicalCenter.episodesInSeason(4));
     }
 
 }
