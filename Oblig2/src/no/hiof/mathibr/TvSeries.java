@@ -11,6 +11,7 @@ public class TvSeries {
     private LocalDate releaseDate;
     private ArrayList<Episode> episodeList = new ArrayList<>();
     private int avgPlaytime;
+    private int numberOfSeasons;
 
 
     public TvSeries(String title, String description, LocalDate releaseDate, int numberOfEpisodes) {
@@ -21,8 +22,17 @@ public class TvSeries {
     }
 
     public void addEpisode(Episode episode) {
-        episodeList.add(episode);
-        this.updateAvgPlaytime();
+        int newSeason = episode.getSeasonNumber();
+        int checkSeason = newSeason + 1;
+        int playtime = episode.getPlaytime();
+        if (newSeason <= checkSeason){
+            this.episodeList.add(episode);
+            this.numberOfSeasons = newSeason;
+            updateAvgPlaytime(playtime);
+        }
+        else {
+            System.out.println("I'm sorry Dave, I'm afraid I can't do that.");
+        }
     }
 
     @Override
@@ -78,6 +88,8 @@ public class TvSeries {
     public int getAvgPlaytime() {
         return avgPlaytime;
     }
-
+    public int getNumberOfSeasons() {
+        return numberOfSeasons;
+    }
 
 }
