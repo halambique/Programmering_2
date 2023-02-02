@@ -24,11 +24,12 @@ public class TvSeries {
     public void addEpisode(Episode episode) {
         int newSeason = episode.getSeasonNumber();
         int checkSeason = newSeason + 1;
-        int playtime = episode.getPlaytime();
         if (newSeason <= checkSeason){
             this.episodeList.add(episode);
-            this.numberOfSeasons = newSeason;
-            updateAvgPlaytime(playtime);
+            if (newSeason > numberOfSeasons) {
+                this.numberOfSeasons = newSeason;
+            }
+            updateAvgPlaytime();
         }
         else {
             System.out.println("I'm sorry Dave, I'm afraid I can't do that.");
@@ -44,8 +45,6 @@ public class TvSeries {
         int newAvgPlaytime = 0;
         for (Episode episode : this.episodeList){
             newAvgPlaytime += episode.getPlaytime();
-            System.out.println(newAvgPlaytime);
-            System.out.println(episode.getPlaytime());
         }
         this.avgPlaytime = newAvgPlaytime/episodeList.size();
     }

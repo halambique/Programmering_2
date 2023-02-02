@@ -8,9 +8,9 @@ public class Main {
         TvSeries medicalCenter = new TvSeries("Medical Center", "Medical Center (also known as Calling Dr. Gannon) is an American medical drama series that aired on CBS from 1969 to 1976. It was produced by MGM Television.\n" +
                 "\n", LocalDate.of(1969, 9, 24), 171);
 
-        Episode theLastTenYards = new Episode("The Last Ten Yards", 1, 1, 60);
-        Episode victim = new Episode("Victim", 2, 1, 60);
-        Episode emergencyInWardE = new Episode("Emergency in Ward E", 3, 1, 60);
+       // Episode theLastTenYards = new Episode("The Last Ten Yards", 1, 1, 60);
+       // Episode victim = new Episode("Victim", 2, 1, 60);
+       // Episode emergencyInWardE = new Episode("Emergency in Ward E", 3, 1, 60);
 
         Random randomPlaytime = new Random();
 
@@ -21,11 +21,8 @@ public class Main {
                 medicalCenter.addEpisode(episode);
             }
         }
-        medicalCenter.updateAvgPlaytime();
-        System.out.println("Average playtime: " + medicalCenter.getAvgPlaytime());
-
-
-       // System.out.println(medicalCenter.episodesInSeason(4));
+        //Testmetode som ikke gir den ønskede feilmeldingen..
+        medicalCenter.addEpisode(new Episode("Test", 7, 99, 27));
     }
 
 }
