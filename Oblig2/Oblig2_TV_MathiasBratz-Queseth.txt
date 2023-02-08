@@ -1,0 +1,35 @@
+1.1
+1.
+Klasser er en måte vi kan bygge en mal for objekter i objektorientert programmering. Det vil si at når vi arbeider med objekter, så arbeider vi med instanser av en klasse.
+For å fungere etter hensikten inneholder klasser instansvariabler, for eksempel til klassen "Kjøretøy" kan vi ha instansvariabelen "Hjul", som kan være en boolsk verdi (båter har ikke hjul, biler har det) eller "Antall_hjul", som kan være en int (en sykkel har to hjul, en bil har 4).
+Metoder er funksjoner som tilhører klassene og kan ta ingen eller flere parametre/argumenter for å utføre programmerte oppgaver.
+
+2.
+Et objekt i Java er en instans av en klasse. Med eksemplene fra 1. kan dette for eksempel være én bil, ikke konseptet "Hva er en bil, hva kan en bil gjøre". Objekters egenskaper defineres av hvilke instansvariabler de tildeles.
+
+3.
+Instansvariabler definerer de individuelle egenskapene til objekter, som i tur vil være med på å definere objektets egenskaper i helhet.
+
+4.
+Overloading er en måte man kan la være å tildele instansvariabler til et objekt, ved at man oppretter flere konstruktører for å modellere objekter i samme klasse. Dette innebærer at man kan instansiere objekter uten å kjenne til samtlige egenskaper objektet har, og eventuelt tildele dem disse egenskapene senere.
+
+5.
+Overriding er når man skriver metoder som er innebygget i en høyere klasse, og derfor må "overskrive" denne metoden for den bestemte klassen. Et eksempel på hvor dette kan være aktuelt å gjøre er i toString()-metoden, der den innebygde metoden skriver ut et objekts minneadresse. Dersom man vil skrive ut informasjon om et objekt i et lesevennlig format, kan man definere en ny toString()-metode spesifikt for den aktuelle klassen.
+
+6.
+Extend er en måte å la underklasser arve egenskaper fra en superklasse. Dette sparer utviklere for koderepetisjon og muliggjør samtidig å lage underklasser som har samme egenskaper som superklassen sin, men definere dens egenskaper ytterligere. Et eksempel på en superklasse kan være kjøretøy, som har underklassene bil, sykkel og båt.
+
+7.
+Polymorfisme i Java er muligheten til å la et objekt ta flere former. Dette gjøres ved å lage metoder i ulike klasser med samme navn, og dermed lage en stor grad av fleksibilitet for innenfor objektorientert programmering.
+
+8.
+Public, Private og Protected er aksessmodifikatorer, som angir hvilke klasser som skal ha tilgang til en metode.
+En public metode vil kunne brukes av alle andre klasser, mens private metoder kun kan benyttes i klassen den er skrevet og av objekter av den klassen. Protected innebærer at metoder kan brukes av klassen selv og alle dens underklasser.
+
+9.
+this er et nøkkelord som angir at vi referer til den konkrete instansen av en gitt klasse. Dette nøkkelordet kan brukes både på metoder og instansvariabler, og brukes for å behandle objekter.
+
+super er et nøkkelord som angir at vi refererer til en overklasse, og brukes dersom man har brukt @Override for å lage en ny metode i en klasse, men ønsker å benytte en foreldreklasses metode med samme navn.
+
+1.2
+Når et Java-program kompileres, oversettes den lesevennlige kildekoden til bytekode eller maskinkode som kan leses og kjøres av hardware. Bytekoden kjøres så i en Java Virtual Machine, som er tilgjengelig på et bredt spekter av operativsystemer. Det er denne "arkitekturen" som gjør at Java er et OS-agnostisk kodespråk, og kan kjøres på så å si all slags maskinvare.

@@ -23,12 +23,9 @@ public class TvSeries {
 
     public void addEpisode(Episode episode) {
         int newSeason = episode.getSeasonNumber();
-        int checkSeason = newSeason + 1;
+        int checkSeason = numberOfSeasons + 1;
         if (newSeason <= checkSeason){
             this.episodeList.add(episode);
-            if (newSeason > numberOfSeasons) {
-                this.numberOfSeasons = newSeason;
-            }
             updateAvgPlaytime();
         }
         else {

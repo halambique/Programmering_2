@@ -21,7 +21,6 @@ public class Main {
                 medicalCenter.addEpisode(episode);
             }
         }
-        //Testmetode som ikke gir den ønskede feilmeldingen..
         medicalCenter.addEpisode(new Episode("Test", 7, 99, 27));
     }
 
