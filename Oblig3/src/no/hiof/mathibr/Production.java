@@ -1,6 +1,7 @@
 package no.hiof.mathibr;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Production{
     private String title;
@@ -8,6 +9,7 @@ public class Production{
     private String description;
     private LocalDate releaseDate;
     private String director;
+    private ArrayList<>
 
 
 

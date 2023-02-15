@@ -7,5 +7,27 @@ public class Roles {
     private String characterLastName;
     private Person portrayedBy;
 
+    public String getCharacterFirstName() {
+        return characterFirstName;
+    }
 
+    public void setCharacterFirstName(String characterFirstName) {
+        this.characterFirstName = characterFirstName;
+    }
+
+    public String getCharacterLastName() {
+        return characterLastName;
+    }
+
+    public void setCharacterLastName(String characterLastName) {
+        this.characterLastName = characterLastName;
+    }
+
+    public Person getPortrayedBy() {
+        return portrayedBy;
+    }
+
+    public void setPortrayedBy(Person portrayedBy) {
+        this.portrayedBy = portrayedBy;
+    }
 }
