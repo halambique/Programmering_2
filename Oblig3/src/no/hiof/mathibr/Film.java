@@ -5,7 +5,7 @@ public class Film extends Production{
     //toString
     @Override
     public String toString() {
-        return getTitle();
+        return "The film: " + getTitle();
     }
 
     //Constructor

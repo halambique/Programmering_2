@@ -7,6 +7,12 @@ public class Roles {
     private String characterLastName;
     private Person portrayedBy;
 
+    public Roles(String characterFirstName, String characterLastName, Person portrayedBy) {
+        this.characterFirstName = characterFirstName;
+        this.characterLastName = characterLastName;
+        this.portrayedBy = portrayedBy;
+    }
+
     public String getCharacterFirstName() {
         return characterFirstName;
     }
@@ -14,15 +20,12 @@ public class Roles {
     public void setCharacterFirstName(String characterFirstName) {
         this.characterFirstName = characterFirstName;
     }
-
     public String getCharacterLastName() {
         return characterLastName;
     }
-
     public void setCharacterLastName(String characterLastName) {
         this.characterLastName = characterLastName;
     }
-
     public Person getPortrayedBy() {
         return portrayedBy;
     }

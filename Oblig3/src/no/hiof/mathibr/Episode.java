@@ -22,6 +22,11 @@ public class Episode extends Production {
 
     }
 
+    public Episode(String s, int episodesInSeason, int seasons, int randInt) {
+        super();
+    }
+
+
     //Get-methods
 
     public int getEpisodeNumber() {
@@ -44,7 +49,7 @@ public class Episode extends Production {
     //toString() method implementation
     @Override
     public String toString() {
-        return "Episode name: " + getTitle() + "\nEpisode number: " + episodeNumber + "\nSeason number: " + seasonNumber + "\nPlaytime: " + getPlaytime();
+        return "Episode name: " + getTitle() + "\nEpisode number: " + episodeNumber + "\nSeason number: " + seasonNumber + "\nPlaytime: " + getPlaytime()+"\n";
 
     }
 }

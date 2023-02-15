@@ -2,7 +2,6 @@ package no.hiof.mathibr;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.random.RandomGenerator;
 
 
 public class TvSeries {
@@ -14,7 +13,7 @@ public class TvSeries {
     private int numberOfSeasons;
 
 
-    public TvSeries(String title, String description, LocalDate releaseDate, int numberOfEpisodes) {
+    public TvSeries(String title, String description, LocalDate releaseDate) {
         this.title = title;
         this.description = description;
         this.releaseDate = releaseDate;
@@ -32,6 +31,14 @@ public class TvSeries {
             System.out.println("I'm sorry Dave, I'm afraid I can't do that.");
         }
     }
+
+    public ArrayList<Roles> getCast(){
+        ArrayList<Roles> castList = new ArrayList<>();
+        for (Episode episode : episodeList) {
+            castList.addAll(episode.getRoleGallery());
+        }
+        return castList;
+        }
 
     @Override
     public String toString() {
