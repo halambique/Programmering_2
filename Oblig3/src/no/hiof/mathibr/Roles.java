@@ -16,7 +16,6 @@ public class Roles {
     public String getCharacterFirstName() {
         return characterFirstName;
     }
-
     public void setCharacterFirstName(String characterFirstName) {
         this.characterFirstName = characterFirstName;
     }
@@ -29,8 +28,11 @@ public class Roles {
     public Person getPortrayedBy() {
         return portrayedBy;
     }
-
     public void setPortrayedBy(Person portrayedBy) {
         this.portrayedBy = portrayedBy;
+    }
+
+    public String getCharacterFullName() {
+        return characterFirstName + " " + characterLastName;
     }
 }

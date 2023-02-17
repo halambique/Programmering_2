@@ -1,0 +1,53 @@
+1.1
+
+Refaktorering er en prosess der man skriver om kode uten å forandre dens funksjon.
+Dette kan gjøres blant annet for å optimalisere et program, skrive "penere" og mer
+lettlest kode eller obfuskere kode. Som utviklere refaktorerer man i hovedsak for å
+optimalisere og forenkle "vedlikehold" av en kodebase.
+
+Static brukes for å angi at en metode tilhører en klasse, og ikke objekter av den
+gitte klassen. Statiske variabler deles av alle instanser/objekter av en klasse, og
+statiske metoder kan kalles uten at man først må opprette et objekt av klassen for
+å kunne bruke dem.
+
+Final brukes for å angi at at en klasse, metode eller variabel ikke kan endres
+når den først er definert. For klasser innebærer dette at den ikke kan "Extendes" av
+andre klasser, for metoder at subklasser ikke kan inneholde metoder som overskriver
+den aktuelle metoden med overriding.
+
+Abstract er en type klasse som ikke kan ha objektinstanser, men behøver subklasser. Dette
+betyr at man kan abstrahere metoder som skal gjelde et sett med flere underklasser, og
+dermed hindre koderepetisjon.
+
+Interface er en måte å gi en klasse gitte metoder som objekter av den klassen eller subklassen
+må inneha. Dette kan tenkes på som egenskaper alle ulike former for objekter av en klasse har,
+men som kan arte seg på ulike måter. Dette er et av konseptene jeg sliter med å forstå,
+så tilbakemeldinger på eventuelle misforståelser av Interface hadde jeg satt stor pris på.
+
+1.2
+Sammenligning av Yahye Abdi Ahmeds metoder fra Oblig2 og mine egne.
+Som en generell kommentar vil jeg si at å lese Yahyes kode er en fryd, og veldig lærerikt.
+Koden er langt bedre dokumentert enn min egen, og jeg hade håpet å "la meg inspirere" til programmeringsoppgavene
+i Oblig3, men reise til Bergen for å hjelpe familie med flytting har gitt et tidspress som ikke har latt meg gjøre dette
+på en måte jeg selv er fornøyd med. Likevel håper jeg å kunne implementere dette i fremtidig programmering, både
+i oppgaver og ellers.
+
+
+leggTilEpisode(Episode episoden):
+I denne funksjonen har Yahye vist større forståelse for objektorientert programmering enn jeg har.
+Ved å benytte get-metodene på en lur måte har han spart seg for å måtte definere nye variabler der jeg definerer en "sjekk"
+mot antall sesonger som finnes. Jeg er også usikker på om jeg har klart å løse problemet han adresserer med
+if-statement på linjene 149-151, og skulle i så fall gjerne funnet en smidigere måte å gjøre dette på.
+
+oppdaterGjennomsnittligSpilletid()
+Her er løsningene våre veldig like. Det kan hende at vi begge har fått hjelp av studentassistent til å løse
+denne oppgaven, men en forskjell er at Yahye bruker double som datatype, der jeg har valgt int.
+Ved bruk av int får jeg en mindre presis fremstilling av gjennomsnittlig spilletid, noe som unektelig er en svakhet.
+Grunnen til at jeg har gjort det er at i for eksempel Wikipedia-artikler vil spilletider oppgis med et heltall.
+Svakheten her er dog at siden Java bruker floor division måtte jeg kjøre fryktelig mange tester for å få resultatet til
+å bli noe annet enn 24. Utregningene våre er helt like, men med ulike variabelnavn.
+
+hentEpisoderISesong(int sesongNummer)
+På denne metoden fikk jeg stor hjelp av studentassistent, og igjen har vi løst oppgaven på svært likt vis.
+Jeg er usikker på om det her ville kunnet refaktoreres til å gjøres mer effektivt. Yahyes kode er igjen langt
+bedre dokumentert og derfor mer lettlest enn min, og jeg skal prøve å skjerpe meg!

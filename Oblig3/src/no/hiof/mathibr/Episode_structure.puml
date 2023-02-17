@@ -1,0 +1,206 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "no.hiof.mathibr.Episode",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_3202712 { 
+   	label=hiof
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_229353755 { 
+   	label=mathibr
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Episode1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Episode</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   episodeNumber: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   seasonNumber: int [1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Film1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Film</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Person1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Person</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   dateOfBirth: LocalDate [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   firstName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   lastName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfEGOTs: int [1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Production1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Production</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   description: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   director: Person [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   playtime: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   releaseDate: LocalDate [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   roleGallery: ArrayList&lt;Roles&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   title: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addMultipleRoles(roles: ArrayList&lt;Roles&gt;)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addRole(role: Roles)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Roles1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Roles</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   characterFirstName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   characterLastName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   portrayedBy: Person [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TvSeries1957226536[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TvSeries</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   avgPlaytime: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   description: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   episodeList: ArrayList&lt;Episode&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberOfSeasons: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   releaseDate: LocalDate [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   title: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addEpisode(episode: Episode)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ episodesInSeason(season: int): ArrayList&lt;Episode&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ updateAvgPlaytime()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Production1957226536 -> Episode1957226536[arrowhead=none, arrowtail=empty, dir=both];
+Production1957226536 -> Film1957226536[arrowhead=none, arrowtail=empty, dir=both];
+Production1957226536 -> Person1957226536[label="director
+[0..1]"];
+Production1957226536 -> Roles1957226536[label="roleGallery
+[0..*]"];
+Roles1957226536 -> Person1957226536[label="portrayedBy
+[0..1]"];
+TvSeries1957226536 -> Episode1957226536[label="episodeList
+[0..*]"];
+    
+}
+@enduml

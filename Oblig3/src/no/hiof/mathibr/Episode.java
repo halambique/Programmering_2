@@ -1,6 +1,7 @@
 package no.hiof.mathibr;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Episode extends Production {
     private int episodeNumber;
@@ -9,24 +10,19 @@ public class Episode extends Production {
 
     //Constructor without playtime
     public Episode(String title, int episodeNumber, int seasonNumber) {
-        super(title);
+        this.setTitle(title);
         this.episodeNumber = episodeNumber;
         this.seasonNumber = seasonNumber;
     }
 
     //Constructor with all variables
-    public Episode(String title, int episodeNumber, int seasonNumber, int playtime, String description, LocalDate releaseDate) {
-        super(title, playtime, description, releaseDate);
+    public Episode(String title, int episodeNumber, int seasonNumber, int playtime) {
+        this.setTitle(title);
         this.episodeNumber = episodeNumber;
         this.seasonNumber = seasonNumber;
+        this.setPlaytime(playtime);
 
     }
-
-    public Episode(String s, int episodesInSeason, int seasons, int randInt) {
-        super();
-    }
-
-
     //Get-methods
 
     public int getEpisodeNumber() {
