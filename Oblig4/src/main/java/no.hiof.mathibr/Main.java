@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Film noCountryForOldMen = new Film("No Country for Old Men", 122);
         Film fargo = new Film("Fargo", 98);
-        Director ethanCoen = new Director("Ethan", "Coen",
+        Person ethanCoen = new Person("Ethan", "Coen",
                 LocalDate.of(1957, 9, 21), 6);
         Person joelCoen = new Person("Joel", "Coen",
                 LocalDate.of(1954, 11, 29), 6);
@@ -29,7 +29,7 @@ public class Main {
 
 
 
-        TvSeries fargoTV = new TvSeries("Fargo", "A dark comedy",LocalDate.of(2014,4,15));
+        TVSeries fargoTV = new TVSeries("Fargo", "A dark comedy",LocalDate.of(2014,4,15));
         Random randomPlaytime = new Random();
         for (int seasons = 1; seasons<=4; seasons++){
             for (int episodesInSeason = 1; episodesInSeason <= 10; episodesInSeason++) {
