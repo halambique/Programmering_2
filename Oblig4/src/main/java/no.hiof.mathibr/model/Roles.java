@@ -1,6 +1,4 @@
-package no.hiof.mathibr;
-
-import java.time.LocalDate;
+package no.hiof.mathibr.model;
 
 public class Roles {
     private String characterFirstName;

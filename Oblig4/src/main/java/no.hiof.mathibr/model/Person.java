@@ -1,4 +1,4 @@
-package no.hiof.mathibr;
+package no.hiof.mathibr.model;
 
 import java.time.LocalDate;
 
@@ -7,6 +7,7 @@ public class Person {
     private String lastName;
     private LocalDate dateOfBirth;
     private int numberOfEGOTs;
+    private String fulltNavn = firstName + lastName;
 
 
     @Override

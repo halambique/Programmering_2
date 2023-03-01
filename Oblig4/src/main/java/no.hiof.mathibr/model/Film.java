@@ -1,11 +1,11 @@
-package no.hiof.mathibr;
+package no.hiof.mathibr.model;
 
 public class Film extends Production{
 
     //toString
     @Override
     public String toString() {
-        return "The film: " + getTitle();
+        return "The film: " + getTittel();
     }
 
     //Constructor

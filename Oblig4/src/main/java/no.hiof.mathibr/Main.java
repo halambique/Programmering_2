@@ -1,5 +1,6 @@
 package no.hiof.mathibr;
-import javax.management.relation.Role;
+import no.hiof.mathibr.model.*;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
@@ -13,13 +14,13 @@ public class Main {
                 LocalDate.of(1957, 9, 21), 6);
         Person joelCoen = new Person("Joel", "Coen",
                 LocalDate.of(1954, 11, 29), 6);
-        fargo.setDirector(joelCoen);
-        System.out.println(fargo.toString() + " was directed by "+ fargo.getDirector().getFullName());
+        fargo.setRegissor(joelCoen);
+        System.out.println(fargo.toString() + " was directed by "+ fargo.getRegissor().getFullName());
 
         Episode theCrocodilesDilemma = new Episode("The Crocodile's Dilemma", 68, 1);
-        theCrocodilesDilemma.setDirector(new Person("Adam", "Bernstein"));
+        theCrocodilesDilemma.setRegissor(new Person("Adam", "Bernstein"));
 
-        System.out.println(theCrocodilesDilemma.getTitle() + " was directed by " + theCrocodilesDilemma.getDirector().getFullName());
+        System.out.println(theCrocodilesDilemma.getTittel() + " was directed by " + theCrocodilesDilemma.getRegissor().getFullName());
 
         Person billyBobThornton = new Person("Billy Bob", "Thornton",
                 LocalDate.of(1955, 8, 4), 0);

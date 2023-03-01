@@ -1,10 +1,10 @@
-package no.hiof.mathibr;
+package no.hiof.mathibr.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 
-public class TVSeries {
+public class TVSeries implements Comparable<TVSeries> {
     private String title;
     private String description;
     private LocalDate releaseDate;
@@ -21,7 +21,7 @@ public class TVSeries {
     }
 
     public void addEpisode(Episode episode) {
-        int newSeason = episode.getSeasonNumber();
+        int newSeason = episode.getSesongNummer();
         int checkSeason = numberOfSeasons + 1;
         if (newSeason <= checkSeason){
             this.episodeList.add(episode);
@@ -29,6 +29,17 @@ public class TVSeries {
         }
         else {
             System.out.println("I'm sorry Dave, I'm afraid I can't do that.");
+        }
+    }
+
+    @Override
+    public int compareTo(TVSeries otherTVSeries) {
+        if (this.numberOfSeasons > otherTVSeries.getNumberOfSeasons()){
+            return 1;
+        } else if (this.numberOfSeasons < otherTVSeries.getNumberOfSeasons()) {
+            return -1;
+        } else {
+            return 0;
         }
     }
 
@@ -57,7 +68,7 @@ public class TVSeries {
     public ArrayList<Episode> episodesInSeason(int season) {
         ArrayList<Episode> returnSeason = new ArrayList<>();
         for (int i = 0; i < episodeList.size(); i++){
-            if (season == episodeList.get(i).getSeasonNumber()){
+            if (season == episodeList.get(i).getSesongNummer()){
                 returnSeason.add(episodeList.get(i));
             }
         }

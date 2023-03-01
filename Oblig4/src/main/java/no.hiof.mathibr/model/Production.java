@@ -1,14 +1,14 @@
-package no.hiof.mathibr;
+package no.hiof.mathibr.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public abstract class Production{
-    private String title;
-    private int playtime;
+    private String tittel;
+    protected int playtime;
     private String description;
-    private LocalDate releaseDate;
-    private Person director;
+    private LocalDate utgivelsesdato;
+    private Person regissor;
     private ArrayList<Roles> roleGallery = new ArrayList<>();
 
     public Production() {
@@ -28,11 +28,11 @@ public abstract class Production{
 
 
     //Getter-Setter
-    public String getTitle() {
-        return title;
+    public String getTittel() {
+        return tittel;
     }
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTittel(String tittel) {
+        this.tittel = tittel;
     }
     public int getPlaytime() {
         return playtime;
@@ -43,20 +43,20 @@ public abstract class Production{
     public void setDescription(String description) {
         this.description = description;
     }
-    public LocalDate getReleaseDate() {
-        return releaseDate;
+    public LocalDate getUtgivelsesdato() {
+        return utgivelsesdato;
     }
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setUtgivelsesdato(LocalDate utgivelsesdato) {
+        this.utgivelsesdato = utgivelsesdato;
     }
     public void setPlaytime(int playtime) {
         this.playtime = playtime;
     }
-    public Person getDirector() {
-        return director;
+    public Person getRegissor() {
+        return regissor;
     }
-    public void setDirector(Person director) {
-        this.director = director;
+    public void setRegissor(Person regissor) {
+        this.regissor = regissor;
     }
     public ArrayList<Roles> getRoleGallery() {
         return roleGallery;
@@ -64,31 +64,30 @@ public abstract class Production{
 
     //Constructor
 
-    public Production(String title, int playtime, String description, LocalDate releaseDate, Person director, ArrayList<Roles> roleGallery) {
-        this.title = title;
+    public Production(String tittel, int playtime, String description, LocalDate utgivelsesdato, Person regissor, ArrayList<Roles> roleGallery) {
+        this.tittel = tittel;
         this.playtime = playtime;
         this.description = description;
-        this.releaseDate = releaseDate;
-        this.director = director;
+        this.utgivelsesdato = utgivelsesdato;
+        this.regissor = regissor;
         this.roleGallery = roleGallery;
     }
 
-    public Production(String title) {
-        this.title = title;
+    public Production(String tittel) {
+        this.tittel = tittel;
     }
 
-    public Production(String title, int playtime) {
-        this.title = title;
+    public Production(String tittel, int playtime) {
+        this.tittel = tittel;
         this.playtime = playtime;
     }
 
-    public Production(String title, int playtime, String description, LocalDate releaseDate) {
+    public Production(String tittel, int playtime, String description, LocalDate utgivelsesdato) {
     }
 
     @Override
     public String toString() {
-        return "The film: " + getTitle() ;
+        return "The film: " + getTittel() ;
     }
-
 
 }

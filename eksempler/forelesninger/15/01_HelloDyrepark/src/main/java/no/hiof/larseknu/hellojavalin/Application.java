@@ -30,7 +30,7 @@ public class Application {
         app.get("/api/dyrepark/{dyrepark-id}", new Handler() {
             @Override
             public void handle(@NotNull Context context) throws Exception {
-                
+
             }
         });
 
