@@ -10,6 +10,7 @@ public abstract class Production{
     private LocalDate utgivelsesdato;
     private Person regissor;
     private ArrayList<Roles> roleGallery = new ArrayList<>();
+    private String bildeUrl;
 
     public Production() {
 
@@ -61,6 +62,10 @@ public abstract class Production{
     public ArrayList<Roles> getRoleGallery() {
         return roleGallery;
     }
+    public String getBildeUrl() {
+        return bildeUrl;
+    }
+
 
     //Constructor
 
@@ -71,6 +76,17 @@ public abstract class Production{
         this.utgivelsesdato = utgivelsesdato;
         this.regissor = regissor;
         this.roleGallery = roleGallery;
+    }
+
+    public Production(String tittel, int playtime, String description, LocalDate utgivelsesdato, Person regissor, ArrayList<Roles> roleGallery, String bildeUrl) {
+        this.tittel = tittel;
+        this.playtime = playtime;
+        this.description = description;
+        this.utgivelsesdato = utgivelsesdato;
+        this.regissor = regissor;
+        this.roleGallery = roleGallery;
+        this.bildeUrl = bildeUrl;
+
     }
 
     public Production(String tittel) {

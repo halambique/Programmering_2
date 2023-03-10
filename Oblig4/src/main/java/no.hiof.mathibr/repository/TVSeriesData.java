@@ -15,7 +15,7 @@ public class TVSeriesData implements TVSeriesRepo {
     public TVSeriesData() {
         this.tvSeries = tvSeries;
 
-        TVSeries fargoTV = new TVSeries("Fargo", "A dark comedy", LocalDate.of(2014, 4, 15));
+        TVSeries fargoTV = new TVSeries("Fargo", "A dark comedy", LocalDate.of(2014, 4, 15), "img/fargo.jpg");
         for (int seasons = 1; seasons <= 4; seasons++) {
             Random randomPlaytime = new Random();
             for (int episodesInSeason = 1; episodesInSeason <= 10; episodesInSeason++) {
@@ -26,7 +26,7 @@ public class TVSeriesData implements TVSeriesRepo {
         }
         tvSeries.add(fargoTV);
 
-        TVSeries theWire = new TVSeries("The Wire", "A gritty tale about Baltimore", LocalDate.of(2001, 5, 22));
+        TVSeries theWire = new TVSeries("The Wire", "A gritty tale about Baltimore", LocalDate.of(2001, 5, 22), "img/thewire.jpg");
         for (int seasons = 1; seasons <= 5; seasons++) {
             Random randomPlaytime = new Random();
             for (int episodesInSeason = 1; episodesInSeason <= 10; episodesInSeason++) {

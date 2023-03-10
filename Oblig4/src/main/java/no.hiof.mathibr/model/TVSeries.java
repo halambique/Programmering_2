@@ -11,6 +11,7 @@ public class TVSeries implements Comparable<TVSeries> {
     private ArrayList<Episode> episodeList = new ArrayList<>();
     private int avgPlaytime;
     private int numberOfSeasons;
+    private String bildeUrl;
 
 
     public TVSeries(String title, String description, LocalDate releaseDate) {
@@ -18,6 +19,15 @@ public class TVSeries implements Comparable<TVSeries> {
         this.description = description;
         this.releaseDate = releaseDate;
         this.episodeList = episodeList;
+    }
+
+
+    public TVSeries(String title, String description, LocalDate releaseDate, String bildeUrl) {
+        this.title = title;
+        this.description = description;
+        this.releaseDate = releaseDate;
+        this.episodeList = episodeList;
+        this.bildeUrl = bildeUrl;
     }
 
     public void addEpisode(Episode episode) {
@@ -105,5 +115,9 @@ public class TVSeries implements Comparable<TVSeries> {
     public int getNumberOfSeasons() {
         return numberOfSeasons;
     }
+    public String getBildeUrl() {
+        return bildeUrl;
+    }
+
 
 }
